@@ -1,6 +1,6 @@
 #Author: your.email@your.domain.com
 
-@Formulario
+@formulario
 Feature: Formulario
   Eu como usuario quero enviar formulario para obter cotacao.
 
