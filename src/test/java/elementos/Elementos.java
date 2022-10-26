@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 
 public class Elementos {
+	public By AutomobileInsurance = By.id("nav_automobile");
 	public By Make = By.id("make");
 	public By Audi = By.xpath("//*[@id=\"make\"]/option[2]");
 	public By Model = By.id("model");
@@ -51,4 +52,13 @@ public class Elementos {
 	public By Comments = By.id("Comments");
 	public By Sendemail = By.id("sendemail");
 	public By Sendemailsuccess = By.xpath("/html/body/div[4]/h2");
+	public By TruckInsurance = By.xpath("//*[@id=\"nav_truck\"]");
+	public By OptionalProductsTruck = By.xpath("//*[@id=\"insurance-form\"]/div/section[3]/div[4]/p/label[1]/span");
+	public By MotorcycleInsurance = By.id("nav_motorcycle");
+	public By OptionalProductsMotorcycle = By.xpath("//*[@id=\"insurance-form\"]/div/section[3]/div[4]/p/label[2]/span");
+	public By CamperInsurance = By.id("nav_camper");
+	public By RightHandDriveCamper = By.xpath("//*[@id=\"insurance-form\"]/div/section[1]/div[5]/p/label[2]/span");
+	public By OptionalProductsCamper = By.xpath("//*[@id=\"insurance-form\"]/div/section[3]/div[4]/p/label[2]/span");
+	
+	
 }

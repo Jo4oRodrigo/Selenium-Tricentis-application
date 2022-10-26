@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "./src/test/resources",
 		glue = "steps",
-		tags = "@formulario",
+		tags = "@formularioAutomobile",
 		dryRun = false,
 		plugin = {"pretty","html:target/reporte.html"},
 		monochrome = true

@@ -9,36 +9,36 @@ import io.cucumber.java.en.When;
 import metodos.MetodoPage;
 import metodos.Utils;
 
-public class FormularioStepAutomobile {
+public class FormularioStepMotorcycle {
 
 	MetodoPage metodo = new MetodoPage();
 	Elementos elemento = new Elementos();
 
-	@Given("que eu esteja no site automobile")
+	@Given("que eu esteja no site motorcycle")
 	public void que_eu_esteja_no_site() throws IOException {
 		metodo.abrirNavegador("http://sampleapp.tricentis.com/101/app.php");
-		metodo.print("que eu esteja no site automobile");
+		metodo.print("home");
 	}
 
-	@Given("preencho enter vehicle data automobile")
-	public void preencho_enter_vehicle_data() throws IOException {
-		metodo.clicar(elemento.AutomobileInsurance);
-		metodo.print("enter vehicle data automobile");
+	@Given("preencho enter vehicle data motorcycle")
+	public void preencho_enter_vehicle_data_motorcycle() throws IOException {
+		metodo.clicar(elemento.MotorcycleInsurance);
+		metodo.print("enter vehicle data motorcycle");
+		metodo.validarTitle("Enter Vehicle Data");
 		metodo.clicar(elemento.Audi);
+		metodo.clicar(elemento.Scooter);
+		metodo.escrever(elemento.CylinderCapacity, "1.0");
 		metodo.escrever(elemento.EnginePerformance, "500");
 		metodo.escrever(elemento.DateOfManufacture, "07/18/2022");
-		metodo.clicar(elemento.NumberOfSeatsFour);
-		metodo.clicar(elemento.FuelType);
+		metodo.clicar(elemento.NumberOfSeatsTwo);
 		metodo.escrever(elemento.ListPrice, "25000");
-		metodo.escrever(elemento.LicensePlateNumber, "1A2B3398GH");
 		metodo.escrever(elemento.AnnualMileage, "100000");
 		metodo.clicar(elemento.NextInsurantData);
-		metodo.print("preencho enter vehicle data automobile");
 
 	}
 
-	@Given("preencho enter insurant data automobile")
-	public void preencho_enter_insurant_data() throws IOException {
+	@Given("preencho enter insurant data motorcycle")
+	public void preencho_enter_insurant_data_motorcycle() {
 		metodo.validarTitle("Enter Insurant Data");
 		metodo.escrever(elemento.FirstName, "Joao");
 		metodo.escrever(elemento.LastName, "Santana");
@@ -52,25 +52,21 @@ public class FormularioStepAutomobile {
 		metodo.clicar(elemento.Hobbies);
 		metodo.escrever(elemento.WebSite, "joaosantana.com");
 		metodo.clicar(elemento.NextEnterProductData);
-		metodo.print("preencho enter insurant data automobile");
-		
 	}
 
-	@Given("preencho enter product data automobile")
-	public void preencho_enter_product_data() {
+	@Given("preencho enter product data motorcycle")
+	public void preencho_enter_product_data_motorcycle() {
 		metodo.validarTitle("Enter Product Data");
 		metodo.escrever(elemento.StarDate, Utils.dataFutura(2, 1, 0));
 		metodo.clicar(elemento.InsuranceSum);
-		metodo.clicar(elemento.MeritRating);
 		metodo.clicar(elemento.DamageInsurance);
-		metodo.clicar(elemento.OptionalProducts);
-		metodo.clicar(elemento.CourtesyCar);
+		metodo.clicar(elemento.OptionalProductsMotorcycle);
 		metodo.clicar(elemento.NextSelectPriceOption);
 
 	}
 
-	@Given("preencho select price option automobile")
-	public void preencho_select_price_option() throws InterruptedException {
+	@Given("preencho select price option motorcycle")
+	public void preencho_select_price_option_motorcycle() throws InterruptedException {
 		metodo.validarTitle("Select Price Option");
 		metodo.clicar(elemento.SelectPriceOption);
 		Thread.sleep(2000);
@@ -78,8 +74,8 @@ public class FormularioStepAutomobile {
 
 	}
 
-	@When("preencho send quote automobile")
-	public void preencho_send_quote() {
+	@When("preencho send quote motorcycle")
+	public void preencho_send_quote_motorcycle() {
 		metodo.validarTitle("Send Quote");
 		metodo.escrever(elemento.Email, "joao@gmail.com");
 		metodo.escrever(elemento.Phone, "01198743216");
@@ -91,7 +87,7 @@ public class FormularioStepAutomobile {
 
 	}
 
-	@Then("valido a mensagem de sucesso automobile")
+	@Then("valido a mensagem de sucesso motorcycle")
 	public void valido_a_mensagem_de_sucesso() throws InterruptedException {
 		Thread.sleep(10000);
 		metodo.validarMensagem(elemento.Sendemailsuccess, "Sending e-mail success!");
