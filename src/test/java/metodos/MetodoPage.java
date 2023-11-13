@@ -10,14 +10,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class MetodoPage {
 	WebDriver driver;
 
 	public void abrirNavegador(String site) {
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.edge.driver", "./driver/msedgedriver.exe");
+		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get(site);
 	}
